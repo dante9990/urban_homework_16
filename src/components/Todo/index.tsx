@@ -14,7 +14,7 @@ const Todo: FC<Props> = ({ id, text, complete }) => {
   return (
     <div className={style.container}>
       <div className={`${style.check} ${complete ? style.cheked : ""}`} onClick={()=>{dispatch(toggleTodoStatus(id))}}></div>
-      <span className={style.text}>{text}</span>
+      <span className={`${style.text} ${complete ? style.line : ""}`}>{text}</span>
       <button
         className={style.btn}
         onClick={() => {

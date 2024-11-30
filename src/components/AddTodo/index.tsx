@@ -31,14 +31,14 @@ const AddTodo = () => {
         type="text"
         name="text"
         id="text"
-        placeholder="Введите название"
+        placeholder="Введите задачу"
         className={style.input}
         value={text}
         onChange={(e) => {
           handleChange(e);
         }}
       />
-      <button type="submit" className={style.btn}>
+      <button type="submit" className={style.btn} disabled={text === ''}>
         Добавить
       </button>
     </form>

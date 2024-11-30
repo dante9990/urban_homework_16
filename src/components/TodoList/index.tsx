@@ -6,9 +6,9 @@ import { TodoState } from "../../types/todo";
 const TodoList = () => {
   const tasks = useSelector((state: { todos: TodoState }) => {
     if (state.todos.filter === "complete") {
-      return state.todos.tasks.filter((task) => !task.complete);
+      return state.todos.tasks.filter((task) => task.complete === true);
     } else if (state.todos.filter === "incomplete") {
-      return state.todos.tasks.filter((task) => task.complete);
+      return state.todos.tasks.filter((task) => task.complete === false);
     }
     return state.todos.tasks;
   });
