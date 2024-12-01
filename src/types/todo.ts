@@ -6,5 +6,5 @@ export interface TodoInterface {
 
 export interface TodoState {
   tasks: TodoInterface[];
-  filter: string;
+  filter: 'all' | 'complete' | 'incomplete';
 }
